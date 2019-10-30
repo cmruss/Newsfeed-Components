@@ -206,6 +206,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 
     expand.addEventListener('click', () => {
         article.classList.toggle('article-open');
+        article.style.transition = '1s';
     })
 
     close.addEventListener('click', () => {
