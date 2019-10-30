@@ -187,7 +187,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 
     articleTitle.textContent = title;
     articleDate.textContent = date;
-    expand.textContent = '\u25bc';
+    expand.textContent = `expand/collapse`;
     close.textContent = '\u2716';
     close.style.color = 'grey';
     close.style.fontSize = '12px';
@@ -205,7 +205,6 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
     };
 
     expand.addEventListener('click', () => {
-        toggleDisplay(expand);
         article.classList.toggle('article-open');
     })
 
