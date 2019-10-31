@@ -55,7 +55,6 @@ function createMenu(array) {
     menu.classList.add('menu');
 
     menu.style.opacity = '0';
-    menu.style.visibility = 'hidden';
 
     const menuButton = document.querySelector('.menu-button');
 
@@ -71,7 +70,6 @@ function createMenu(array) {
         menu.classList.toggle('menu--open');
         menu.style.opacity = '1';
         fade(menu);
-        menu.style.visibility = 'visible';
 
     });
 
