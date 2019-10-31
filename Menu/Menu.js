@@ -54,11 +54,25 @@ function createMenu(array) {
 
     menu.classList.add('menu');
 
+    menu.style.opacity = '0';
+    menu.style.visibility = 'hidden';
+
     const menuButton = document.querySelector('.menu-button');
+
+
+    var fade = function(item) {
+        (function reveal(val) {
+            item.style.opacity = val;
+            if (val < 1) setTimeout(reveal, 1, val + 0.02);
+        })(0);
+    }
 
     menuButton.addEventListener('click', () => {
         menu.classList.toggle('menu--open');
-        menu.style.transition = '1s';
+        menu.style.opacity = '1';
+        fade(menu);
+        menu.style.visibility = 'visible';
+
     });
 
     return menu;
